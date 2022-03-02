@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+dropdb witter || true
+createdb witter || true
+
+psql -d witter < bin/setup.sql
